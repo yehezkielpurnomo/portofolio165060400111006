@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="id" data-bs-theme="light"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Yehezkiel Christian Purnomo | Water Resources Engineer</title> 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style> 
+        :root { 
+            --kawah-toska: #38b2ac; --tebing-rose: #b57a78; 
+            --bg: #f1f5f9; --text: #1a1c1e;
+            --grad: radial-gradient(circle, rgba(56,178,172,0.1) 0%, rgba(241,245,249,0.8) 100%);
+        } 
+
+        [data-bs-theme="dark"] {
+            --bg: #1a1c1e; --text: #f1f5f9;
+            --grad: radial-gradient(circle, rgba(56,178,172,0.05) 0%, rgba(26,28,30,0.7) 100%);
+        }
+
+        body, html { 
+            height: 100%; margin: 0; background-color: var(--bg); color: var(--text); 
+            font-family: 'Jost', sans-serif; overflow: hidden; user-select: none;
+            transition: all 0.5s ease;
+        } 
+
+        .theme-toggle {
+            position: fixed; top: 20px; right: 20px; z-index: 100; border: none;
+            background: var(--text); color: var(--bg); padding: 8px 18px;
+            border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+
+        .main-content { 
+            position: relative; z-index: 10; height: 100vh; display: flex; 
+            flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; background: var(--grad); 
+        } 
+
+        /* OBFUSCATION: Foto Profil via CSS */
+        .profile-image { 
+            width: 130px; height: 130px; border-radius: 24px; 
+            border: 2px solid var(--tebing-rose); padding: 4px; margin-bottom: 25px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); position: relative;
+            background-color: rgba(255,255,255,0.05); overflow: hidden;
+        } 
+
+        .img-internal {
+            width: 100%; height: 100%; border-radius: 18px;
+            background-image: url('foto-yehezkiel2.webp'); /* Sembunyi di CSS */
+            background-size: cover; background-position: center;
+            pointer-events: none;
+        }
+
+        .protection-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            z-index: 10; background: transparent;
+        }
+
+        h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: 3px; margin-bottom: 8px; } 
+        
+        /* ADJUSTMENT: Tagline Bold */
+        .tagline { 
+            font-weight: 600; 
+            opacity: 0.8; 
+            margin-bottom: 30px; 
+            font-size: 0.85rem; 
+            letter-spacing: 2px; 
+            text-transform: lowercase;
+        } 
+
+        /* CSS untuk descriptive text - Justify */
+        .description-text {
+            max-width: 500px;
+            margin: 0 auto 15px auto;
+            font-weight: 300;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            text-align: justify;
+        }
+
+        p.description-text:last-of-type {
+            margin-bottom: 35px;
+        }
+
+        .social-links { display: flex; gap: 20px; }
+        .social-links a { transition: 0.3s; opacity: 0.85; }
+        .social-links a:hover { transform: translateY(-3px); filter: drop-shadow(0 0 5px var(--kawah-toska)); }
+
+        /* Icon Optimization */
+        [data-bs-theme="light"] .social-links img:not([src*="color"]):not([src*="fluent"]) {
+            filter: brightness(0.2);
+        }
+        .social-links img { width: 24px; height: 24px; } 
+
+        .river-container { position: absolute; bottom: 0; width: 100%; height: 10vh; z-index: 5; overflow: hidden; } 
+        .waves { width: 100%; height: 10vh; } 
+        .parallax > use { animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite; } 
+
+        @keyframes move-forever { 0% { transform: translate3d(-90px,0,0); } 100% { transform: translate3d(85px,0,0); } } 
+
+        @media (max-width: 768px) { 
+            h1 { font-size: 1.3rem; } .profile-image { width: 110px; height: 110px; }
+            .description-text { max-width: 90%; }
+        } 
+    </style> 
+</head> 
+<body oncontextmenu="return false;">
+
+    <button class="theme-toggle" id="themeBtn">Switch to Dark</button>
+
+    <div class="main-content"> 
+        <div class="profile-image"> 
+            <div class="protection-overlay"></div>
+            <div class="img-internal"></div> </div> 
+
+        <h1>Yehezkiel Christian PURNOMO</h1> 
+        <p class="tagline">water resources engineer</p> 
+        
+        <p class="description-text">
+            Water engineering graduate with experiences in multinational environments.
+            Fast learner, open to new challenges, and eager to grow in a role that values teamwork, communication, and adaptability.
+        </p>
+        
+        <p class="description-text">
+            Currently pursuing further education at International Master of Hydraulic, Civil, Environmental Engineering (HCEE), Grenoble INP – Ense3, Université Grenoble Alpes.
+        </p>
+
+        <div class="social-links"> 
+            <a href="https://www.linkedin.com/in/yehezkielprnm/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LN"></a> 
+            <a href="https://medium.com/@yehezkielprnm" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/medium-monogram.png" alt="MD"></a> 
+            <a href="https://drive.google.com/file/d/1H2tuWSBQ9hnEz7Q2jeka_q1KsCSrlcjJ/view?usp=sharing" target="_blank"><img src="https://img.icons8.com/color/48/000000/resume.png" alt="CV"></a> 
+            <a href="https://www.instagram.com/yehezkielprnm" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" alt="IG"></a> 
+            <a href="mailto:Yehezkiel-Christian.Purnomo@grenoble-inp.org"><img src="https://img.icons8.com/ios-filled/50/ffffff/mail.png" alt="ML"></a> 
+        </div> 
+    </div> 
+
+    <div class="river-container"> 
+        <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none"> 
+            <defs><path id="w" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs> 
+            <g class="parallax"> 
+                <use xlink:href="#w" x="48" y="0" fill="rgba(56, 178, 172, 0.4)"/> 
+                <use xlink:href="#w" x="48" y="3" fill="rgba(56, 178, 172, 0.3)"/> 
+                <use xlink:href="#w" x="48" y="5" fill="rgba(56, 178, 172, 0.2)"/> 
+                <use xlink:href="#w" x="48" y="7" fill="#38b2ac"/> 
+            </g> 
+        </svg> 
+    </div> 
+
+    <script>
+        const btn = document.getElementById('themeBtn');
+        const root = document.documentElement;
+
+        btn.addEventListener('click', () => {
+            const isLight = root.getAttribute('data-bs-theme') === 'light';
+            const next = isLight ? 'dark' : 'light';
+            root.setAttribute('data-bs-theme', next);
+            btn.textContent = `Switch to ${isLight ? 'Light' : 'Dark'}`;
+        });
+
+        // Anti-Intrusion Lite
+        document.onkeydown = (e) => {
+            if(e.keyCode == 123 || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83))) return false;
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" async></script>
+</body> 
+</html>
